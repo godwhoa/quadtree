@@ -1,4 +1,4 @@
-#include "quadtree.h"
+#include <quadtree.h>
 
 QuadTree::QuadTree(float x, float y, int w, int h) {
   // set bounds

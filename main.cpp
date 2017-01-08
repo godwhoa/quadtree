@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
-#include "quadtree.cpp"
-#include "aabb.h"
+#include <quadtree.h>
+#include <aabb.h>
 
 void print_aabb(AABB obj) {
   printf("x: %f y:%f w: %d h: %d\n", obj.x, obj.y, obj.w, obj.h);
