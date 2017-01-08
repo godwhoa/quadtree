@@ -2,7 +2,7 @@
 #include <stdint.h>
 #include <vector>
 #include <array>
-#include <aabb.h>
+#include <aabb.hpp>
 
 enum { NW, NE, SW, SE };
 
