@@ -3,7 +3,6 @@
 #include <vector>
 #include <array>
 #include <aabb.hpp>
-
 enum { NW, NE, SW, SE };
 
 struct search_result {

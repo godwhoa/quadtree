@@ -1,8 +1,14 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
-#include <quadtree.hpp>
 #include <aabb.hpp>
+#include <quadtree.hpp>
+
+static uint32_t uid() {
+  static uint32_t id = 0;
+  id++;
+  return id;
+}
 
 void print_aabb(AABB obj) {
   printf("x: %f y:%f w: %d h: %d\n", obj.x, obj.y, obj.w, obj.h);

@@ -1,20 +1,20 @@
 # -- General -- #
-CC       =g++
+CXX       =g++
 IDIR     =.
 BDIR     =build
 # -- Flags/files -- #
-CFLAGS =-std=c++11 -I$(IDIR)
+CXXFLAGS =-std=c++11 -I$(IDIR) -g -static-libgcc -static -static-libstdc++
 ODIR   =obj
 OBJ    =main.o quadtree.o
 _OBJ   =$(patsubst %,$(ODIR)/%,$(_OBJ))
 
-all: files proj
+all: files quadtree
 
 $(ODIR)/%.o: %.cpp
-	$(CC) -c -o $@ $< $(CFLAGS)
+	$(CXX) -c -o $@ $< $(CXXFLAGS)
 
-proj: $(OBJ)
-	$(CC) -o $(BDIR)/$@ $^ $(CFLAGS)
+quadtree: $(OBJ)
+	$(CXX) -o $(BDIR)/$@ $^ $(CXXFLAGS)
 
 files:
 	mkdir -p $(ODIR)
@@ -24,3 +24,5 @@ files:
 
 clean:
 	rm -f $(ODIR)/*.o
+	rm -f $(BDIR)/*
+	rm *.o

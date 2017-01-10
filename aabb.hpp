@@ -10,12 +10,6 @@ struct AABB {
   int h;
 };
 
-uint32_t uid() {
-  static uint32_t id = 0;
-  id++;
-  return id;
-}
-
 inline bool intersect(AABB A, AABB B) {
   return (abs(A.x - B.x) * 2 < (A.w + B.w)) &&
          (abs(A.y - B.y) * 2 < (A.h + B.h));

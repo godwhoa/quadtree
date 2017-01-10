@@ -2,7 +2,7 @@
 
 QuadTree::QuadTree(float x, float y, int w, int h) {
   // set bounds
-  bounds = AABB{uid(), x, y, w, h};
+  bounds = AABB{0, x, y, w, h};
   // init to null
   for (int i = 0; i < 4; ++i) {
     children[i] = nullptr;
